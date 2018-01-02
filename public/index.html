@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        padding: 50px;
+        font-size: 14px;
+    }
+    a {
+        color: #00brff;
+    }
+    #content {
+        width: 800px;
+        margin: 0 auto;
+    }
+    #room {
+        background: #ddd;
+        margin-bottom: 15px;
+    }
+    #messages {
+        width: 690px;
+        height: 300px;
+        background: #eee;
+        margin-bottom: 15px;
+        margin-right: 10px;
+    }
+</style>
+<body>
+    <div id="content">
+        <div id="room"></div>
+        <div id="room-list"></div>
+        <div id="messages"></div>
+
+        <form id="send-form">
+            <input id="send-message">
+            <input id="send-button" type="submit" value="Send">
+
+            <div id="help">
+                Chat commands:
+                <ul>
+                    <li>Change nickname: <code class="name">/nick [username]</code></li>
+                    <li>Join/create room: <code>/join [room name]</code></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="https://js.app.meitudata.com/meitumall/v1/lib/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="./js/chat.js"></script>
+<script type="text/javascript" src="./js/chat_aa.js"></script>
+</html>
